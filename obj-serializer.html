@@ -1,0 +1,20 @@
+<link rel="import" href="../polymer/polymer.html">
+<script src="lib/obj-serializer.js"></script>
+
+<polymer-element name="obj-serializer" attributes="">
+  <script>
+    Polymer("obj-serializer",{
+      serializer : null,
+      created:function()
+      { 
+        OBJSerializer = require( "obj-serializer" );
+        this.serializer = new OBJSerializer();
+      },
+      //public api
+      serialize:function(rootElement, binary)
+      {
+        return this.serializer.serialize( rootElement );
+      } 
+    });
+  </script>
+</polymer>
