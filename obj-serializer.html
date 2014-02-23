@@ -1,12 +1,12 @@
 <link rel="import" href="../polymer/polymer.html">
 <script src="lib/obj-serializer.js"></script>
 
-<polymer-element name="obj-serializer" attributes="">
+<polymer-element name="obj-serializer" extends="usco-serializer-base">
   <script>
     Polymer("obj-serializer",{
-      serializer : null,
       created:function()
       { 
+        this.super();
         OBJSerializer = require( "obj-serializer" );
         this.serializer = new OBJSerializer();
       },
