@@ -7,11 +7,16 @@
     "url": "http://github.com/usco/usco-obj-serializer.git"
   },
   "main": "obj-serializer.js",
-  "dependencies": {},
-  "devDependencies": {
-    "jasmine-node": "",
+  "dependencies": {
     "three-js": "git://github.com/usco/three.js.git",
     "composite-detect": "0.0.3"
+  },
+  "devDependencies": {
+    "jasmine-node": "",
+    "grunt": "~0.4.2",
+    "grunt-browserify": "~1.2.12",
+    "workerify": "~0.2.3",
+    "grunt-bump": "0.0.13"
   },
   "scripts": {
     "test": "jasmine-node specs/"

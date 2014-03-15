@@ -14,15 +14,9 @@ How to generate browser/polymer.js version (with require support):
 ------------------------------------------------------------------
 Type: 
 
-    browserify obj-serializer.js -r ./obj-serializer.js:obj-serializer -o lib/obj-serializer.js -x composite-detect -x three
+      grunt build-browser-lib
 
-then replace (manually for now) all following entries in the generated file:
-
-  "composite-detect":"awZPbp","three":"Wor+Zu"
-
-with the correct module names, ie:
-
-   "composite-detect":"composite-detect","three":"three"
+This will generate the correct browser(ified) version of the source in the lib folder
 
 
 
